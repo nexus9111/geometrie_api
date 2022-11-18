@@ -4,6 +4,7 @@ const controller = require('../controllers/dimensionalTwoController');
 
 // C
 router.post('/create', controller.create);
+router.get("/distance", controller.distance);
 
 // R
 router.get('/', controller.list);
@@ -15,6 +16,5 @@ router.put('/:name', controller.update);
 // D
 router.delete('/:name', controller.delete);
 
-router.get("/distance/:name1/:name2", controller.distance);
 
 module.exports = router;

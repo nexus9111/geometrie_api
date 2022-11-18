@@ -24,7 +24,7 @@ const HATEOAS_PARAMS = {
         "method": "DELETE"
     },
     DISTANCE: {
-        "href": "/2d/points/distance/:namePoint1/:namePoint2",
+        "href": "/2d/points/distance",
         "method": "GET"
     }
 }
@@ -203,13 +203,17 @@ exports.delete = async (req, res, next) => {
 
 exports.distance = async (req, res, next) => {
     try {
-        let point1 = await Point.findOne({name: req.params.name1});
+        if (!req.query.points || req.query.points.length != 2) {
+            req.statusCode = 400;
+            throw new Error("Missing required fields");
+        }
+        let point1 = await Point.findOne({name: req.query.points[0]});
         if (!point1) {
             req.statusCode = 404;
             throw new Error("Point 1 not found");
         }
 
-        let point2 = await Point.findOne({name: req.params.name2});
+        let point2 = await Point.findOne({name: req.query.points[1]});
         if (!point2) {
             req.statusCode = 404;
             throw new Error("Point 2 not found");
