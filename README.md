@@ -1,5 +1,9 @@
 # BOILERPLATE API
 
+## 💬 Instruction:
+
+Create a REST api that allows to create 2d and 3d points and to calculate their distances. The api must respect the CRUD model 
+
 ## 🔎 Requirements
 
 - NodeJS installed
