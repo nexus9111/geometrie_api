@@ -1,10 +1,14 @@
 # BOILERPLATE API
 
+## 🔎 Requirements
+
+- NodeJS installed
+- MongoDB database running on your machine
+
 ## ℹ️ Informations 
 
 This api include:
 
-- 📝 Loggers
 - 📚 MongoDB database
 - 🪞 PROD and DEV environment
 - 🛡 High level of protection (HTTP headers, anti-dos, ip filter, protected routes)
@@ -14,8 +18,8 @@ This api include:
 ## 🛠 Installation
 
 ```bash
-$> git clone git@github.com:nexus9111/personal_api_base.git
-$> cd personal_api_base
+$> git clone git@github.com:nexus9111/geometrie_api.git
+$> cd geometrie_api
 $> npm i
 $> cp .env.example .env
 // edit .env as you need
@@ -45,4 +49,4 @@ $> npm run prod
 ## ✒️ License
 
 - Author: Joss C
-- Last update: 03/24/2022
+- Last update: 11/18/2022
