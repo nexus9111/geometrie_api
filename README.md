@@ -4,6 +4,8 @@
 
 - NodeJS installed
 - MongoDB database running on your machine
+    - You can install it <a href="https://www.mongodb.com/docs/manual/administration/install-community/">here</a>
+    - Or run it thanks to my docker compose with command: `docker-compose build; docker-compose up -d`
 
 ## ℹ️ Informations 
 
